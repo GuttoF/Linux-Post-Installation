@@ -7,18 +7,6 @@ cd
 sudo apt update
 
 mkdir -p /home/$USER/Repos
-
-sudo add-apt-repository ppa:alexlarsson/flatpak
-
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-
-sudo add-apt-repository ppa:webupd8team/terminix
-
-sudo apt update
-
-sudo apt install -y flatpak
-sudo apt install -y tilix
-sudo apt install -y gnome-software-plugin-flatpak
 sudo apt install -y snapd
 
 # ---------- SNAP ----------
@@ -54,19 +42,13 @@ sudo apt install -y make build-essential libssl-dev zlib1g-dev libbz2-dev librea
 
 curl https://pyenv.run | bash
 
-echo -e 'if shopt -q login_shell; then' \
-      '\n  export PYENV_ROOT="$HOME/.pyenv"' \
-      '\n  export PATH="$PYENV_ROOT/bin:$PATH"' \
-      '\n eval "$(pyenv init --path)"' \
-      '\n eval "$(pyenv init -)"' \
-      '\n eval "$(pyenv virtualenv-init -)"' \
-      '\nfi' >> ~/.bashrc
-echo -e 'if [ -z "$BASH_VERSION" ]; then'\
-      '\n  export PYENV_ROOT="$HOME/.pyenv"'\
-      '\n  export PATH="$PYENV_ROOT/bin:$PATH"'\
-      '\n  eval "$(pyenv init --path)"'\
-      '\nfi' >>~/.profile
+echo -e '\n export PYENV_ROOT="$HOME/.pyenv"' \
+        '\n export PATH="$PYENV_ROOT/bin:$PATH"' \
+        '\n eval "$(pyenv init --path)"' \
+        '\n eval "$(pyenv init -)"' \
+        '\n eval "$(pyenv virtualenv-init -)"'  >> ~/.bashrc
 
-# ---------- CHANGE TERMINAL ----------      
-sudo update-alternatives --config x-terminal-emulator
+echo -e '\n export PYENV_ROOT="$HOME/.pyenv"'\
+       '\n  export PATH="$PYENV_ROOT/bin:$PATH"'\
+       '\n  eval "$(pyenv init --path)"'  >>~/.profile
   
