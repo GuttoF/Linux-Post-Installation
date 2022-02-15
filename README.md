@@ -13,7 +13,4 @@ Just go to your terminal and:
 ~~~shell
 # run install.sh
 bash install.sh
-
-# if you want to install another one
-bash something.sh
 ~~~
