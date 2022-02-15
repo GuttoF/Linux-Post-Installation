@@ -1,4 +1,4 @@
-# Linux-Post-Installation
+# Linux Post Installation
 
 A Shell Script that makes a basic setup on ubuntu-based distro for my daily use. It comes with snap, docker and pyenv, you can choose witch one do you want to install
 
