@@ -34,24 +34,6 @@ else
   echo "Ok"
 fi
 
-
-# ---------- ZSH ----------
-  wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf
-
-  sudo mv 'MesloLGS NF Regular.ttf' /usr/share/fonts
-
-  sudo apt install zsh -y
-
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
-  git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-  
-  git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
-
-  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
-else
-  echo "Ok, zsh will not install"
-
 # ---------- SNAP ----------
 
 read -p "Do you want to install snap? [y/n]: " inst_snap
