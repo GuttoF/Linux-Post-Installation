@@ -9,6 +9,9 @@ then
   
   sudo apt install git
   sudo apt install zsh -y
+else
+  "Ok"
+fi
 
 # ---------- OH MY ZSH ----------
 
@@ -18,6 +21,7 @@ then
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 else
   "Ok"
+fi
 
 
 # ---------- OH MY ZSH ----------
@@ -129,6 +133,7 @@ then
   echo "You'll need to change the zsh theme in .zshrc to ZSH_THEME='spaceship' and change your terminal's font to MESLOLGS"
 else
   echo "Ok"
+fi
 
 # ---------- ZSH EXTENSIONS ----------
 
@@ -140,3 +145,4 @@ then
 
 else
   echo "Ok"
+fi
