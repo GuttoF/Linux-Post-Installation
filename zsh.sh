@@ -3,14 +3,10 @@
 read -p "Do you want to use zsh? [y/n]: " inst_zsh
 if [ $inst_zsh == "y"]
 then
-  wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf
-  
-  sudo mv 'MesloLGS NF Regular.ttf' /usr/share/fonts
-  
   sudo apt install git
   sudo apt install zsh -y
 else
-  "Ok"
+  echo "Ok"
 fi
 
 # ---------- OH MY ZSH ----------
@@ -20,14 +16,14 @@ if [$omzsh == "y"]
 then
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 else
-  "Ok"
+  echo "Ok"
 fi
 
 
 # ---------- OH MY ZSH ----------
 
 read -p "Do you want to install Spaceship? [y/n]: " spaceship_theme
-if [$spaceship_theme == "y"]
+if [ $spaceship_theme == "y" ]
 then
   git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
   ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
